@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Header } from '@nestjs/common';
 import { AppService } from './app.service';
 
 // empty parameter to @Controller is triggered at no router /
@@ -10,6 +10,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  @Header("Content-Type", "application/json")
   getObject(): object {
     return this.appService.getObject();
   }
