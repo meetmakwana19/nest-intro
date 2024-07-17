@@ -20,8 +20,18 @@
 ## Services :
 
 - This should have heavy lifting business logic stuff so that controllers can stay lean.
+- The `@Injectable` decorator defines a service. 
+- Services are used for business logic and can be injected into controllers or other services.
 
 ## Modules :
 
 - There is a module file for each feature combining all the controllers and providers used for that feature.
 - The App module combines all the other modules from app using the `imports` key.
+
+## Decorator : 
+
+- A special kind of declaration that can be attached to a class, method, property, or parameter to add metadata or modify its behavior.
+- Decorators in NestJS are a core concept used to add metadata to classes, methods, properties, and parameters. 
+- They allow you to modify the behavior of these elements.
+- Examples : 
+  - @Module, @Controller, @Get, @Post, @Put, @Delete, etc.
